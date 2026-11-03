@@ -1,0 +1,97 @@
+/* Theme and typography from lomzem.github.io/src/routes/layout.css. */
+@font-face {
+  font-family: "Figtree Variable";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("fonts/figtree-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lilex Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/lilex-latin-wght-normal.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: light dark;
+  --background: oklch(0.9872 0.0034 325.6024);
+  --foreground: oklch(0.2747 0.0222 322.9401);
+  --primary: oklch(0.563 0.0442 322.0879);
+  --ring: oklch(0.6605 0.0529 321.8074);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(0.2071 0.0115 319.459);
+    --foreground: oklch(0.9344 0.0102 325.6586);
+    --primary: oklch(0.7257 0.0649 323.6058);
+    --ring: oklch(0.7257 0.0649 323.6058);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Figtree Variable", ui-sans-serif, sans-serif, system-ui;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+main {
+  max-width: 36rem;
+  margin-inline: auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+ul {
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li + li {
+  margin-top: 1.25rem;
+}
+
+a {
+  color: inherit;
+  font-family: "Lilex Variable", ui-monospace, monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-underline-offset: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+a:focus-visible {
+  border-radius: 0.08rem;
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+}
+
+@media (min-width: 40rem) {
+  main {
+    padding-top: 6rem;
+  }
+}

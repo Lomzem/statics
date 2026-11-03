@@ -11,6 +11,11 @@ Links use each page's `<title>`, falling back to its relative filename when the
 title is absent or blank. Links sort by relative path. Static files and assets
 retain their paths; hidden directories (including `.github` tooling) are omitted.
 
+The index uses the typography and light/dark colors from `lomzem.github.io`.
+Styles live in `assets/index.css`; Figtree and Lilex (Fontsource 5.3.0) are
+self-hosted with their licenses in `assets/fonts/`. Dark mode follows the system
+preference.
+
 Build locally with `uv` (it manages Python; no package dependencies are needed):
 
 ```sh

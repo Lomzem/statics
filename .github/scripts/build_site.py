@@ -65,9 +65,11 @@ def build(source, output):
         '<!doctype html>\n<html lang="en">\n<head>\n'
         '  <meta charset="utf-8">\n'
         '  <meta name="viewport" content="width=device-width, initial-scale=1">\n'
-        '  <title>Statics</title>\n</head>\n<body>\n'
-        '  <h1>Statics</h1>\n  <ul>\n'
-        f'{links}\n  </ul>\n</body>\n</html>\n',
+        '  <title>Statics</title>\n'
+        '  <link rel="stylesheet" href="assets/index.css">\n'
+        '</head>\n<body>\n<main>\n'
+        '  <h1>Statics</h1>\n  <ul role="list">\n'
+        f'{links}\n  </ul>\n</main>\n</body>\n</html>\n',
         encoding="utf-8",
     )
 
